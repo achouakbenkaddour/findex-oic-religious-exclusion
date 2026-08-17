@@ -3,10 +3,11 @@ message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "Religion-based financial exclusion in OIC economies: a harmonised economy-year dataset from the Global Findex, 2011-2024"
 version: 1.0.0
-date-released: 2026-08-16
+date-released: 2026-08-17
 license: CC-BY-4.0
-doi: 10.5281/zenodo.PLACEHOLDER
-url: "https://doi.org/10.5281/zenodo.PLACEHOLDER"
+doi: 10.5281/zenodo.21971441
+url: "https://doi.org/10.5281/zenodo.21971441"
+repository-code: "https://github.com/achouakbenkaddour/findex-oic-religious-exclusion"
 authors:
   - family-names: Benkaddour
     given-names: Achouak
