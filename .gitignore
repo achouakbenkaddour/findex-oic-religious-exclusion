@@ -1,0 +1,48 @@
+# =============================================================================
+# .gitignore  --  findex-oic-religious-exclusion
+#
+# This folder holds ONLY publishable material. That is the primary protection:
+# what is not here cannot be published. This file is the second line of
+# defence -- it catches non-distributable material copied in by accident,
+# at any depth, at any time.
+# =============================================================================
+
+# ---- Findex microdata and individual-level derivatives ----------------------
+# Forbidden by the Findex terms of use. Never distributable, in any form.
+raw/
+clean/
+*.zip
+*.rds
+*.RData
+*.sav
+*.dta
+
+# ---- local working material -------------------------------------------------
+# Legal to publish, but no reason to: working notes, superseded drafts, and
+# the research agenda, which names papers not yet written.
+docs/working/
+docs/superseded/
+docs/diagnostics/
+
+# ---- third-party documents ---------------------------------------------------
+# World Bank questionnaires, IFSB reports, central bank PDFs. Not ours to
+# republish. Cited by URL and checksum instead.
+docs/questionnaires/
+*.pdf
+
+# ---- R environment -----------------------------------------------------------
+.Rhistory
+.Rapp.history
+.Rproj.user/
+*.Rproj
+.Renviron
+
+# ---- Windows and editors -----------------------------------------------------
+Thumbs.db
+desktop.ini
+~$*
+
+# ---- belt and braces: wherever these end up ---------------------------------
+**/panel_individual*
+**/*DO_NOT_DISTRIBUTE*
+**/*_PARTIAL*
