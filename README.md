@@ -157,7 +157,7 @@ None of these affects the Findex-derived aggregates in
 
 > Benkaddour, A. (2026). *Religion-based financial exclusion in OIC economies:
 > a harmonised economy-year dataset from the Global Findex, 2011–2024*
-> (Version 1.0.0) [Data set]. Zenodo. https://doi.org/[DOI]
+> (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21971441
 
 Underlying microdata: Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S.
 *The Global Findex Database.* World Bank. Obtain from the World Bank under
