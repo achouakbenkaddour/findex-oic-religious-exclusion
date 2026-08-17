@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Religion-based financial exclusion in OIC economies: a harmonised economy-year dataset from the Global Findex, 2011-2024"
+version: 1.0.0
+date-released: 2026-08-16
+license: CC-BY-4.0
+doi: 10.5281/zenodo.PLACEHOLDER
+url: "https://doi.org/10.5281/zenodo.PLACEHOLDER"
+authors:
+  - family-names: Benkaddour
+    given-names: Achouak
+    affiliation: "University of Tamanghasset, Algeria"
+abstract: >-
+  Harmonised economy-year aggregates measuring the share of adults without a
+  financial-institution account who cite religious reasons, built from five
+  rounds of the World Bank Global Findex microdata (2011, 2014, 2017, 2021,
+  2024). 709 economy-round cells across 40 fields, with a flagged balanced
+  frame of 34 OIC member states observed in every round in which the outcome
+  exists, plus a hand-coded Islamic banking regime variable sourced to central
+  bank and regulator documents. Contains no individual-level records: the
+  Findex microdata are not redistributed. Estimates are conditional
+  associations, not identified effects; the religion item is asked only of the
+  unbanked and the design is repeated cross-sections.
+keywords:
+  - financial inclusion
+  - Islamic finance
+  - Global Findex
+  - OIC
+  - religious exclusion
+  - unbanked
+  - survey harmonisation
+references:
+  - type: database
+    title: "The Global Findex Database"
+    authors:
+      - family-names: Demirguc-Kunt
+        given-names: Asli
+      - family-names: Klapper
+        given-names: Leora
+      - family-names: Singer
+        given-names: Dorothe
+      - family-names: Ansar
+        given-names: Saniya
+    publisher:
+      name: World Bank
+    notes: >-
+      Source microdata. Not redistributed in this repository. Obtain from the
+      World Bank under their terms and verify against
+      docs/checksums_findex_20260815.csv.

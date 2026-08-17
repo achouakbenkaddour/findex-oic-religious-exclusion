@@ -1,0 +1,156 @@
+target_variable,concept,round,source_variable,source_values,recode_r,status,source_document,note
+iso3,economy identifier,2011,ecnmycode,ISO3 character,"{ m <- c(ZAR=""COD"", KSV=""XKX"", ROM=""ROU"", WBG=""PSE""); x <- as.character(x); ifelse(x %in% names(m), unname(m[x]), x) }",available,diagnostics 08_economy_coverage.csv,2011 spelling differs; 4 legacy codes recoded in 2011 and 2014
+economy_label,"economy name (label only, never a key)",2011,economy,character,as.character(x),available,raw file,encoding-damaged for CIV and TUR in 2014/2021; labels drift across rounds
+regionwb_raw,World Bank region as published,2011,regionwb,character,as.character(x),not_comparable,raw file,"category labels change every round; harmonise separately, do not stack"
+wgt,within-economy sampling weight,2011,wgt,numeric,as.numeric(x),available,diagnostics 07_weights_audit.csv,sum(wgt) == n within each economy in every round; carries no cross-economy information
+pop_adult,adult population of the economy,2011,pop_adult,numeric,as.numeric(x),available,raw file,constant within economy; used to build wgt_pooled
+iso3,economy identifier,2014,economycode,ISO3 character,"{ m <- c(ZAR=""COD"", KSV=""XKX"", ROM=""ROU"", WBG=""PSE""); x <- as.character(x); ifelse(x %in% names(m), unname(m[x]), x) }",available,diagnostics 08_economy_coverage.csv,2011 spelling differs; 4 legacy codes recoded in 2011 and 2014
+economy_label,"economy name (label only, never a key)",2014,economy,character,as.character(x),available,raw file,encoding-damaged for CIV and TUR in 2014/2021; labels drift across rounds
+regionwb_raw,World Bank region as published,2014,regionwb,character,as.character(x),not_comparable,raw file,"category labels change every round; harmonise separately, do not stack"
+wgt,within-economy sampling weight,2014,wgt,numeric,as.numeric(x),available,diagnostics 07_weights_audit.csv,sum(wgt) == n within each economy in every round; carries no cross-economy information
+pop_adult,adult population of the economy,2014,pop_adult,numeric,as.numeric(x),available,raw file,constant within economy; used to build wgt_pooled
+iso3,economy identifier,2017,economycode,ISO3 character,as.character(x),available,diagnostics 08_economy_coverage.csv,
+economy_label,"economy name (label only, never a key)",2017,economy,character,as.character(x),available,raw file,encoding-damaged for CIV and TUR in 2014/2021; labels drift across rounds
+regionwb_raw,World Bank region as published,2017,regionwb,character,as.character(x),not_comparable,raw file,"category labels change every round; harmonise separately, do not stack"
+wgt,within-economy sampling weight,2017,wgt,numeric,as.numeric(x),available,diagnostics 07_weights_audit.csv,sum(wgt) == n within each economy in every round; carries no cross-economy information
+pop_adult,adult population of the economy,2017,pop_adult,numeric,as.numeric(x),available,raw file,constant within economy; used to build wgt_pooled
+iso3,economy identifier,2021,economycode,ISO3 character,as.character(x),available,diagnostics 08_economy_coverage.csv,
+economy_label,"economy name (label only, never a key)",2021,economy,character,as.character(x),available,raw file,encoding-damaged for CIV and TUR in 2014/2021; labels drift across rounds
+regionwb_raw,World Bank region as published,2021,regionwb,character,as.character(x),not_comparable,raw file,"category labels change every round; harmonise separately, do not stack"
+wgt,within-economy sampling weight,2021,wgt,numeric,as.numeric(x),available,diagnostics 07_weights_audit.csv,sum(wgt) == n within each economy in every round; carries no cross-economy information
+pop_adult,adult population of the economy,2021,pop_adult,numeric,as.numeric(x),available,raw file,constant within economy; used to build wgt_pooled
+iso3,economy identifier,2024,economycode,ISO3 character,as.character(x),available,diagnostics 08_economy_coverage.csv,
+economy_label,"economy name (label only, never a key)",2024,economy,character,as.character(x),available,raw file,encoding-damaged for CIV and TUR in 2014/2021; labels drift across rounds
+regionwb_raw,World Bank region as published,2024,regionwb,character,as.character(x),not_comparable,raw file,"category labels change every round; harmonise separately, do not stack"
+wgt,within-economy sampling weight,2024,wgt,numeric,as.numeric(x),available,diagnostics 07_weights_audit.csv,sum(wgt) == n within each economy in every round; carries no cross-economy information
+pop_adult,adult population of the economy,2024,pop_adult,numeric,as.numeric(x),available,raw file,constant within economy; used to build wgt_pooled
+barrier_religion,unbanked cites religious reasons,2011,q10f,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_religion,unbanked cites religious reasons,2014,q8e,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,2014 contains one out-of-range value 22 -> NA
+barrier_religion,unbanked cites religious reasons,2017,fin11e,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_religion,unbanked cites religious reasons,2021,fin11e,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_religion,unbanked cites religious reasons,2024,,,,not_asked,Questionnaire2024.pdf + Glossary2024.pdf,ITEM DISCONTINUED in 2024. NB 2024 fin11e = 'family member already has an account'
+barrier_far,financial institutions too far away,2011,q10a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_far,financial institutions too far away,2014,q8a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_far,financial institutions too far away,2017,fin11a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_far,financial institutions too far away,2021,fin11a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_far,financial institutions too far away,2024,fin11a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,
+barrier_expensive,services too expensive,2011,q10b,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_expensive,services too expensive,2014,q8b,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_expensive,services too expensive,2017,fin11b,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_expensive,services too expensive,2021,fin11b,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_expensive,services too expensive,2024,fin11b,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,
+barrier_documentation,lacks necessary documentation,2011,q10c,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_documentation,lacks necessary documentation,2014,q8c,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_documentation,lacks necessary documentation,2017,fin11c,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_documentation,lacks necessary documentation,2021,fin11c,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_documentation,lacks necessary documentation,2024,fin11c,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,
+barrier_trust,does not trust financial institutions,2011,q10d,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_trust,does not trust financial institutions,2014,q8d,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_trust,does not trust financial institutions,2017,fin11d,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_trust,does not trust financial institutions,2021,fin11d,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_trust,does not trust financial institutions,2024,fin11f,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,letter position differs from other rounds
+barrier_money,not enough money,2011,q10e,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_money,not enough money,2014,q8f,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_money,not enough money,2017,fin11f,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_money,not enough money,2021,fin11f,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_money,not enough money,2024,fin11d,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,letter position differs from other rounds
+barrier_family,family member already has an account,2011,q10g,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,
+barrier_family,family member already has an account,2014,q8g,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_family,family member already has an account,2017,fin11g,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_family,family member already has an account,2021,fin11g,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_family,family member already has an account,2024,fin11e,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,letter position differs from other rounds
+barrier_no_need,no need for financial services,2011,,,,not_asked,Questionnaire2011.pdf,item absent from this round's battery
+barrier_no_need,no need for financial services,2014,q8i,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_no_need,no need for financial services,2017,fin11h,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,
+barrier_no_need,no need for financial services,2021,fin11h,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+barrier_no_need,no need for financial services,2024,,,,not_asked,Questionnaire2024.pdf,item absent from this round's battery
+barrier_cannot_get,cannot get an account,2011,,,,not_asked,Questionnaire2011.pdf,item absent from this round's battery
+barrier_cannot_get,cannot get an account,2014,q8h,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,
+barrier_cannot_get,cannot get an account,2017,,,,not_asked,Questionnaire2017.pdf,item absent from this round's battery
+barrier_cannot_get,cannot get an account,2021,,,,not_asked,Questionnaire2021.pdf,item absent from this round's battery
+barrier_cannot_get,cannot get an account,2024,,,,not_asked,Questionnaire2024.pdf,item absent from this round's battery
+asked_barriers,routed into the unbanked barriers battery,2011,q10a:q10g,derived,as.integer(rowSums(!is.na(BATTERY)) > 0),derived,diagnostics 05b_universe_margins.csv,defines the questionnaire universe; not identical to account_fin==0
+asked_barriers,routed into the unbanked barriers battery,2014,q8a:q8i,derived,as.integer(rowSums(!is.na(BATTERY)) > 0),derived,diagnostics 05b_universe_margins.csv,defines the questionnaire universe; not identical to account_fin==0
+asked_barriers,routed into the unbanked barriers battery,2017,fin11a:fin11h,derived,as.integer(rowSums(!is.na(BATTERY)) > 0),derived,diagnostics 05b_universe_margins.csv,defines the questionnaire universe; not identical to account_fin==0
+asked_barriers,routed into the unbanked barriers battery,2021,fin11a:fin11h,derived,as.integer(rowSums(!is.na(BATTERY)) > 0),derived,diagnostics 05b_universe_margins.csv,defines the questionnaire universe; not identical to account_fin==0
+asked_barriers,routed into the unbanked barriers battery,2024,fin11a:fin11f,derived,as.integer(rowSums(!is.na(BATTERY)) > 0),derived,diagnostics 05b_universe_margins.csv,defines the questionnaire universe; not identical to account_fin==0
+account_fin,account at a financial institution,2011,account,1=yes 2=no 3=DK,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",proxy,raw file,2011 has no account_fin; `account` is FI-only in this round because mobile money was not measured
+account_fin,account at a financial institution,2014,account_fin,1=yes 2=no,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Glossary2024.pdf,derived variable: also counts respondents who report receiving payments into an account after answering no to FIN1
+account_fin,account at a financial institution,2017,account_fin,0/1,as.integer(x),available,Glossary2024.pdf,derived variable: also counts respondents who report receiving payments into an account after answering no to FIN1
+account_fin,account at a financial institution,2021,account_fin,0/1,as.integer(x),available,Glossary2024.pdf,derived variable: also counts respondents who report receiving payments into an account after answering no to FIN1
+account_fin,account at a financial institution,2024,account_fin,0/1,as.integer(x),available,Glossary2024.pdf,derived variable: also counts respondents who report receiving payments into an account after answering no to FIN1
+account_any,account of any type,2011,account,"1/2 (2011,2014); 0/1 (2017+)","ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",not_comparable,raw file,2011 has no mobile-money component; not comparable with later rounds
+account_any,account of any type,2014,account,"1/2 (2011,2014); 0/1 (2017+)","ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,raw file,
+account_any,account of any type,2017,account,"1/2 (2011,2014); 0/1 (2017+)",as.integer(x),available,raw file,
+account_any,account of any type,2021,account,"1/2 (2011,2014); 0/1 (2017+)",as.integer(x),available,raw file,
+account_any,account of any type,2024,account,"1/2 (2011,2014); 0/1 (2017+)",as.integer(x),available,raw file,
+account_mob,mobile money account,2011,,,,not_asked,Questionnaire2011.pdf,concept did not exist in the 2011 instrument
+account_mob,mobile money account,2014,account_mob,1/2 (2014); 0/1 (2017+),"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,raw file,"large structural NA: asked only in GSMA mobile-money economies. NA must stay NA, never recoded to 0"
+account_mob,mobile money account,2017,account_mob,1/2 (2014); 0/1 (2017+),as.integer(x),available,raw file,"large structural NA: asked only in GSMA mobile-money economies. NA must stay NA, never recoded to 0"
+account_mob,mobile money account,2021,account_mob,1/2 (2014); 0/1 (2017+),as.integer(x),available,raw file,"large structural NA: asked only in GSMA mobile-money economies. NA must stay NA, never recoded to 0"
+account_mob,mobile money account,2024,account_mob,1/2 (2014); 0/1 (2017+),as.integer(x),available,raw file,"large structural NA: asked only in GSMA mobile-money economies. NA must stay NA, never recoded to 0"
+debit_card,has a debit or ATM card,2011,q3a,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2011.pdf,part of the routing gate in every round
+debit_card,has a debit or ATM card,2014,q2,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,part of the routing gate in every round
+debit_card,has a debit or ATM card,2017,fin2,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,part of the routing gate in every round
+debit_card,has a debit or ATM card,2021,fin2,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,part of the routing gate in every round
+debit_card,has a debit or ATM card,2024,fin2,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2024.pdf,part of the routing gate in every round
+card_own_name,card connected to an account in own name,2011,,,,not_asked,Questionnaire2011.pdf,
+card_own_name,card connected to an account in own name,2014,q3,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2014.pdf,"the 2017 routing gate uses this, not the card-ownership question"
+card_own_name,card connected to an account in own name,2017,fin3,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2017.pdf,"the 2017 routing gate uses this, not the card-ownership question"
+card_own_name,card connected to an account in own name,2021,,,,not_asked,Questionnaire2021.pdf,
+card_own_name,card connected to an account in own name,2024,,,,not_asked,Questionnaire2024.pdf,
+anydigpayment,made or received a digital payment,2011,,,,not_asked,Questionnaire2011.pdf,no derived equivalent in this round
+anydigpayment,made or received a digital payment,2014,,,,not_asked,Questionnaire2014.pdf,no derived equivalent in this round
+anydigpayment,made or received a digital payment,2017,pay_onlne,0/1,as.integer(x),not_comparable,raw file,"pay_onlne is online payment only, a narrower concept; do NOT map onto anydigpayment"
+anydigpayment,made or received a digital payment,2021,anydigpayment,0/1,as.integer(x),available,raw file,2024 has structural NA where the module was not fielded
+anydigpayment,made or received a digital payment,2024,anydigpayment,0/1,as.integer(x),available,raw file,2024 has structural NA where the module was not fielded
+mobileowner,owns a mobile phone,2011,,,,not_asked,raw file,absent from this round
+mobileowner,owns a mobile phone,2014,,,,not_asked,raw file,absent from this round
+mobileowner,owns a mobile phone,2017,mobileowner,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+mobileowner,owns a mobile phone,2021,mobileowner,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+mobileowner,owns a mobile phone,2024,,,,not_asked,raw file,absent from this round
+internet_access,has access to the internet,2011,,,,not_asked,raw file,
+internet_access,has access to the internet,2014,,,,not_asked,raw file,
+internet_access,has access to the internet,2017,,,,not_asked,raw file,
+internet_access,has access to the internet,2021,internetaccess,1=yes 2=no 3=DK 4=Refused,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,Questionnaire2021.pdf,
+internet_access,has access to the internet,2024,,,,not_asked,raw file,
+internet_use,uses the internet,2011,,,,not_asked,raw file,
+internet_use,uses the internet,2014,,,,not_asked,raw file,
+internet_use,uses the internet,2017,,,,not_asked,raw file,
+internet_use,uses the internet,2021,,,,not_asked,raw file,
+internet_use,uses the internet,2024,internet_use,0/1,as.integer(x),available,raw file,"USE, not ACCESS; kept as a separate target and never merged with internet_access"
+is_female,"respondent is female (1=female, 0=male)",2011,female,1=MALE 2=FEMALE,"ifelse(x==2, 1L, ifelse(x==1, 0L, NA_integer_))",available,diagnostics 10_female_coding_check.csv + Glossary2024.pdf,"CONFIRMED per-round coding: 1=male, 2=female in this round -- renamed to is_female so the raw variable is never used directly"
+is_female,"respondent is female (1=female, 0=male)",2014,female,1=MALE 2=FEMALE,"ifelse(x==2, 1L, ifelse(x==1, 0L, NA_integer_))",available,diagnostics 10_female_coding_check.csv + Glossary2024.pdf,"CONFIRMED per-round coding: 1=male, 2=female in this round -- renamed to is_female so the raw variable is never used directly"
+is_female,"respondent is female (1=female, 0=male)",2017,female,1=MALE 2=FEMALE,"ifelse(x==2, 1L, ifelse(x==1, 0L, NA_integer_))",available,diagnostics 10_female_coding_check.csv + Glossary2024.pdf,"CONFIRMED per-round coding: 1=male, 2=female in this round -- renamed to is_female so the raw variable is never used directly"
+is_female,"respondent is female (1=female, 0=male)",2021,female,1=FEMALE 2=MALE,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,diagnostics 10_female_coding_check.csv + Glossary2024.pdf,"CONFIRMED per-round coding: 1=female, 2=male in this round -- renamed to is_female so the raw variable is never used directly"
+is_female,"respondent is female (1=female, 0=male)",2024,female,1=FEMALE 2=MALE,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,diagnostics 10_female_coding_check.csv + Glossary2024.pdf,"CONFIRMED per-round coding: 1=female, 2=male in this round -- renamed to is_female so the raw variable is never used directly"
+age,age in years,2011,age,15..99 (2011-2021); 15..100 (2024),"ifelse(x >= 99, NA_real_, as.numeric(x))",available,raw file,top code differs; 99 treated as missing pending confirmation
+age,age in years,2014,age,15..99 (2011-2021); 15..100 (2024),"ifelse(x >= 99, NA_real_, as.numeric(x))",available,raw file,top code differs; 99 treated as missing pending confirmation
+age,age in years,2017,age,15..99 (2011-2021); 15..100 (2024),"ifelse(x >= 99, NA_real_, as.numeric(x))",available,raw file,top code differs; 99 treated as missing pending confirmation
+age,age in years,2021,age,15..99 (2011-2021); 15..100 (2024),"ifelse(x >= 99, NA_real_, as.numeric(x))",available,raw file,top code differs; 99 treated as missing pending confirmation
+age,age in years,2024,age,15..99 (2011-2021); 15..100 (2024),"ifelse(x >= 99, NA_real_, as.numeric(x))",available,raw file,top code differs; 99 treated as missing pending confirmation
+educ3,"education, 3 categories",2011,educ,"1-3 substantive, 4=DK, 5=Refused","ifelse(x %in% 1:3, as.integer(x), NA_integer_)",available,Glossary2024.pdf,4 and 5 recoded to NA so the variable means the same in all rounds
+educ3,"education, 3 categories",2014,educ,"1-3 substantive, 4=DK, 5=Refused","ifelse(x %in% 1:3, as.integer(x), NA_integer_)",available,Glossary2024.pdf,4 and 5 recoded to NA so the variable means the same in all rounds
+educ3,"education, 3 categories",2017,educ,"1-3 substantive, 4=DK, 5=Refused","ifelse(x %in% 1:3, as.integer(x), NA_integer_)",available,Glossary2024.pdf,4 and 5 recoded to NA so the variable means the same in all rounds
+educ3,"education, 3 categories",2021,educ,"1-3 substantive, 4=DK, 5=Refused","ifelse(x %in% 1:3, as.integer(x), NA_integer_)",available,Glossary2024.pdf,4 and 5 recoded to NA so the variable means the same in all rounds
+educ3,"education, 3 categories",2024,educ,"1-3, missing already NA","ifelse(x %in% 1:3, as.integer(x), NA_integer_)",available,Glossary2024.pdf,4 and 5 recoded to NA so the variable means the same in all rounds
+inc_q,within-economy income quintile,2011,inc_q,1..5,"ifelse(x %in% 1:5, as.integer(x), NA_integer_)",available,Glossary2024.pdf,within-economy quintile; comparable as published
+inc_q,within-economy income quintile,2014,inc_q,1..5,"ifelse(x %in% 1:5, as.integer(x), NA_integer_)",available,Glossary2024.pdf,within-economy quintile; comparable as published
+inc_q,within-economy income quintile,2017,inc_q,1..5,"ifelse(x %in% 1:5, as.integer(x), NA_integer_)",available,Glossary2024.pdf,within-economy quintile; comparable as published
+inc_q,within-economy income quintile,2021,inc_q,1..5,"ifelse(x %in% 1:5, as.integer(x), NA_integer_)",available,Glossary2024.pdf,within-economy quintile; comparable as published
+inc_q,within-economy income quintile,2024,inc_q,1..5,"ifelse(x %in% 1:5, as.integer(x), NA_integer_)",available,Glossary2024.pdf,within-economy quintile; comparable as published
+in_workforce,in the labour force,2011,,,,not_asked,raw file,
+in_workforce,in the labour force,2014,,,,not_asked,raw file,
+in_workforce,in the labour force,2017,emp_in,0=out 1=in,as.integer(x),available,raw file,coded 0/1 in this round
+in_workforce,in the labour force,2021,emp_in,1=in 2=out,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,raw file,coded 1/2 in this round
+in_workforce,in the labour force,2024,emp_in,1=in 2=out,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,raw file,coded 1/2 in this round
+urban,urban residence,2011,,,,not_asked,raw file,
+urban,urban residence,2014,,,,not_asked,raw file,
+urban,urban residence,2017,,,,not_asked,raw file,
+urban,urban residence,2021,urbanicity_f2f,1/2,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",partial,raw file,"face-to-face samples only; missing for 68,243 of 143,887 rows. Not usable as a panel control"
+urban,urban residence,2024,urbanicity,1/2,"ifelse(x==1, 1L, ifelse(x==2, 0L, NA_integer_))",available,raw file,
+wgt_pooled,weight for pooling across economies,2011,"wgt, pop_adult",derived,"wgt * pop_adult / sum(wgt)  # within economy; sum(wgt)==n, verified",derived,diagnostics 07_weights_audit.csv,use for any statistic pooled across economies; use wgt alone within a single economy
+wgt_pooled,weight for pooling across economies,2014,"wgt, pop_adult",derived,"wgt * pop_adult / sum(wgt)  # within economy; sum(wgt)==n, verified",derived,diagnostics 07_weights_audit.csv,use for any statistic pooled across economies; use wgt alone within a single economy
+wgt_pooled,weight for pooling across economies,2017,"wgt, pop_adult",derived,"wgt * pop_adult / sum(wgt)  # within economy; sum(wgt)==n, verified",derived,diagnostics 07_weights_audit.csv,use for any statistic pooled across economies; use wgt alone within a single economy
+wgt_pooled,weight for pooling across economies,2021,"wgt, pop_adult",derived,"wgt * pop_adult / sum(wgt)  # within economy; sum(wgt)==n, verified",derived,diagnostics 07_weights_audit.csv,use for any statistic pooled across economies; use wgt alone within a single economy
+wgt_pooled,weight for pooling across economies,2024,"wgt, pop_adult",derived,"wgt * pop_adult / sum(wgt)  # within economy; sum(wgt)==n, verified",derived,diagnostics 07_weights_audit.csv,use for any statistic pooled across economies; use wgt alone within a single economy

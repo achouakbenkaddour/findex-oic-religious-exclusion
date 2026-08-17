@@ -1,0 +1,72 @@
+Religion-based financial exclusion in OIC economies:
+a harmonised economy-year dataset from the Global Findex, 2011-2024
+
+Copyright (c) 2026 Achouak Benkaddour, University of Tamanghasset, Algeria
+
+
+================================================================================
+SCOPE — read this first
+================================================================================
+
+This repository is dual-licensed, because it contains two different kinds of
+work and one kind of thing that is not licensed here at all.
+
+1. DATA AND DOCUMENTATION -- Creative Commons Attribution 4.0 International
+   Applies to: deposit/, docs/, README.md, and every .csv and .md file.
+
+2. CODE -- MIT License
+   Applies to: scripts/ and every .R file.
+
+3. THE UNDERLYING GLOBAL FINDEX MICRODATA -- NOT COVERED BY EITHER LICENCE
+   No individual-level Findex record is contained in this repository, and none
+   is redistributed by it. The Findex microdata remain governed solely by the
+   World Bank's own terms of use and must be obtained from the World Bank.
+   The aggregates in deposit/ are derived works computed from those data; the
+   licences above cover the derived aggregates and the code, not the source.
+
+   Third-party documents cited in docs/ -- World Bank questionnaires, IFSB
+   reports, central bank publications -- remain the property of their
+   publishers and are referenced by URL and checksum, never redistributed here.
+
+
+================================================================================
+1. DATA AND DOCUMENTATION: CC BY 4.0
+================================================================================
+
+This work is licensed under the Creative Commons Attribution 4.0 International
+License. Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to share and adapt the material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+Required attribution:
+
+  Benkaddour, A. (2026). Religion-based financial exclusion in OIC economies:
+  a harmonised economy-year dataset from the Global Findex, 2011-2024
+  (Version 1.0.0) [Data set]. Zenodo. https://doi.org/[DOI]
+
+
+================================================================================
+2. CODE: MIT License
+================================================================================
+
+Copyright (c) 2026 Achouak Benkaddour
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

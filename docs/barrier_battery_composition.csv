@@ -1,0 +1,11 @@
+item_concept,2011,2014,2017,2021,2024
+too far away,q10a (A),q8a (A),fin11a (A),fin11a (A),fin11a (A)
+too expensive,q10b (B),q8b (B),fin11b (B),fin11b (B),fin11b (B)
+lack documentation,q10c (C),q8c (C),fin11c (C),fin11c (C),fin11c (C)
+lack trust,q10d (D),q8d (D),fin11d (D),fin11d (D),fin11f (F)
+not enough money,q10e (E),q8f (F),fin11f (F),fin11f (F),fin11d (D)
+RELIGIOUS REASONS,q10f (F),q8e (E),fin11e (E),fin11e (E),ABSENT
+family member has account,q10g (G),q8g (G),fin11g (G),fin11g (G),fin11e (E)
+cannot get an account,ABSENT,q8h (H),ABSENT,ABSENT,ABSENT
+no need for financial services,ABSENT,q8i (I),fin11h (H),fin11h (H),ABSENT
+battery length,7,9,8,8,6
